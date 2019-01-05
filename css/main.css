@@ -1,0 +1,639 @@
+body{
+    background-image: url("../images/yellowpinkflowers.jpg");
+    /* image from https://www.pinterest.com/pin/279715826826577171/ */
+}
+/*------------------------ INDEX.HTML---------------------------------*/
+.containerHome{
+    border: solid  rgba(245, 165, 108, 0.644);
+    height: 800px;
+    width:500px;
+    margin-top: -5%;
+    margin-left: 430px;
+    background-color:  rgb(245, 165, 108);
+ }
+ /* this is the the background color and holds the div that holds the text elementss on
+the first page */
+ .text{
+     /* text div holds the text in the middle of the page */
+     /* allows text to be contained and not spread out behind sliding screen */
+     height: 400px;
+     width: 400px;
+     margin-left: 10%;
+     margin-top: 15%;
+     background-color:  rgba(245, 152, 86, 0.644); 
+ }
+  #texthome{
+     /* styling of title words "AGWE" */
+     margin: auto;
+     margin-top: 150px;
+     /* moves text down */
+     text-align: center;
+     font-size:100px;
+     color: whitesmoke;
+     text-shadow: 3px 3px whitesmoke;
+     /* gives depth to words */
+     font-family: 'Syncopate', sans-serif;
+     animation: blur 3s ease-out infinite;
+     /* this will allow text to be blured out slightly by changing opacity */
+ }
+ a{
+     text-decoration: none;
+     /* takes off underline when link is clicked */
+ }
+ body h2{
+     /* styling of subheader words */
+     margin: auto;
+     margin-top: 80px;
+     text-align: center;
+     font-size: 20px;
+     font-family:  'Syncopate', sans-serif;
+     color: whitesmoke;
+ }
+ /* Split the screen in half */
+ .split {
+     /* split is the entire container that is holding both sides
+     have to give dimesnions in order for it to display */
+     height: 100%;
+     width: 50%;
+     position: fixed;
+     z-index: 1;
+     /* major key!!  /* order of elements higher z-index the more it will be in front */
+     /*needed in order to have "layers" stacked (class box rotate ) */
+     top: 0;
+     padding-top: 15px;
+ }
+ .left {
+    /* control the left side */
+     left: 0;
+     /* this not the same as margin-left but similar tried margin left first did not work */
+     background-image: url("../images/yellowpinkflowers.jpg");
+     /* image from https://www.pinterest.com/pin/279715826826577171/ */
+     animation: left 10s infinite ease-in;
+     /* this allows the home page to have the effect that it is opening on left side */
+   }
+   /* control the right side */
+   .right {
+     right: 0;
+     background-image: url("../images/yellowpinkflowers.jpg");
+     /* image from https://www.pinterest.com/pin/279715826826577171/ */
+     animation: right 10s infinite ease-in;
+     /* this allows the home page to have the effect that it is opening on the rigthside */
+   }
+   @keyframes left{
+       /* keyframe for leftside of homepage */
+     0%{
+         margin-left:0px;
+     }
+     25%{
+         margin-left: -200px;
+      } 
+ }
+ @keyframes right{
+     /* keyframe for rightside of  homepage */
+     0%{
+         margin-right:0px;
+     }
+     25%{
+         margin-right:-200px;
+      } 
+ }
+ @keyframes blur{
+     /* keyframe allows text to be blured out  */
+     0% {
+         text-shadow: 0 0 100px; #fff; opacity: 0;
+     }
+     25%{
+         text-shadow: 0 0 70px; fff; opacity: 1;
+     }
+     50%{
+         text-shadow: 0 0 50px; fff; opacity: 1;
+     }
+ }
+ /* -------------- END OF INDEX1.HTML--------------------------------------- */
+ /*-------------------------- NAVIGAATION BAR------------------------------- */
+ ul{
+     /* using unorderd list to create navigation bar */
+     text-align: right;
+     word-spacing: 50px;
+     border: none;
+     grid-column:span 3;
+ }
+ li {
+     /* list items (home, destinations,etc.) */
+     position: relative;
+     display:inline;
+     color:  rgba(236, 195, 13, 0.678);
+     font-family:  'Syncopate', sans-serif;
+     font-size: 25px;
+ }
+ li:hover{
+     /* when you hover over the navbar it will go to white text */
+     color: white;
+ }
+ /* -----------------END NAV BAR -------------------- */
+ /*-----------------INDEX2.HTML TRINIDAD----------------------- */
+ .container{
+     /* main div that holds content allows for background to be styled */
+     border: none;
+     display: grid;
+     grid-template-columns: 1fr  3fr 1fr;
+     /* defining columns inside grid */
+     grid-auto-rows: minmax(200px, auto);
+     /* rows will be defined when content is placed inside */
+     grid-gap: 10px;
+     /* space gap bewteen column and rows  */
+     background-color: rgb(255, 255, 255);
+ }
+ .header{
+     /* holds the unorderd list (navbar) */
+     border: none;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ }
+ .title{
+ /* div for trinidadTextH2 */
+     border: none;
+     height: 400px;
+     width: 100px;
+ } 
+ #textH2{
+  /* destinations text */
+     margin-top: 470%;
+     margin-left: 135px;
+     color: rgb(242, 47, 109);
+     transform: rotate(-90deg);
+     font-size: 55px;
+     text-decoration: none;
+     text-shadow: 3px 3px rgb(244, 244, 244);
+ }
+ .contentBox{ 
+     border: none;
+     grid-column: 2/3;
+     grid-row: span 2;
+     box-shadow: 5px 5px whitesmoke;
+     background-image: url("../images/trinidadhotel.jpg");
+     /* image from https://images.unsplash.com/photo-1525596662741-e94ff9f26de1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ac4de836de7f910918d2f821e624890b&auto=format&fit=crop&w=500&q=60, https://unsplash.com/ */
+     background-size: cover;
+     /* causes background image to cover entire space of the contentbox  */
+     background-repeat: no-repeat;
+     /* causes background to not repeat */
+ }
+ .blueBox{
+     /* holding "TRINIDAD" */
+     background-color: rgba(245, 165, 108, 0.644);
+     height: 300px;
+     width: 400px;
+     border: none;
+     margin-left: 70%;
+     margin-top: 20%;
+     font-size: 35px;
+     text-align: center;
+     text-shadow: 3px 3px whitesmoke;
+     font-family: 'Syncopate', sans-serif;
+    color: whitesmoke;
+ }
+ .textH1{
+     /* same animation blur effect used on country pages */
+     animation: blur 3s ease-out infinite;
+     /* same type of animation/keyframe that was used on index.html text */
+ }
+ #smallBlueBox{
+     /* holds text "book" */
+     height: 20px;
+     width: 400px;
+     border: none;
+     margin: auto;
+     margin-left: 70%;
+     margin-top: -200px;
+     text-align: center;
+     background-color:rgba(245, 163, 108, 0.783);
+ }
+ .contentSmall{
+     /* div underneath photo  */
+     border: solid rgba(236, 195, 13, 0.678);
+     grid-column: 2/3;
+ }
+ .contentSmaller{
+     /* this div was created to have text directly lined up with the titleText */
+     height: 200px;
+     width: 450px;
+     margin: auto;
+     margin-top: -180px;
+     margin-left: 40%;
+     border: none;
+ }
+ #textP{
+     /* information about country */
+     font-size: 20px;
+     color: rgb(2, 2, 2);
+ }
+ #textTitle{
+     /* title "Best of Trinidad" */
+     color: rgb(2, 2, 2);
+     margin-right: 100%;
+     font-size:40px
+ }
+ .footer{
+     border: solid;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ }
+ /* ---------------------END INDEX2.HTML------------ */
+ 
+ /* ------------ INDEX3.HTML COSTA RICA----------------------- */
+ .header{
+     /* holds navbar */
+     border: none;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ }
+ .contentBoxTwo{ 
+     /* holds main image for page */
+     border: none;
+     grid-column: 2/3;
+     grid-row: span 3;
+     box-shadow: 10px 10px whitesmoke;
+     background-image: url("../images/costarica1.jpeg");
+     /* image from https://images.unsplash.com/photo-1526541157922-a2f309434a00?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af0ed30e376f67e766212209d4b0c330&auto=format&fit=crop&w=500&q=60, https://unsplash.com/ */
+ }
+ .contentSmallerTwo{
+     height: 200px;
+     width: 450px;
+     margin: auto;
+     margin-top: -180px;
+     margin-left: 40%;
+     border: none;
+ }
+ #textP2{
+     /* text about country */
+     font-size: 20px;
+     color: rgb(2, 2, 2);
+ }
+ .footer{
+     border: solid;
+     grid-column-start: 1;
+     grid-column-end: 4;
+     color: rgba(245, 163, 108, 0.783);
+ }
+#footerList{
+margin-right:100%;
+}
+ /* ----------------END INDEX3.HTML-------------- */
+ 
+ /* --------------------INDEX4.HTML--------------------------- */
+ .container4{
+     border: none;
+     display: grid;
+     grid-template-columns: 1fr  1fr 1fr;
+     /* defining columns inside grid */
+     grid-template-rows: 1fr 1fr;
+     grid-auto-rows: minmax(200px, auto);
+     grid-gap: 10px;
+     background-color: white;
+ } 
+ .title4{
+     /* border: solid; */
+     box-shadow: 10px 10px whitesmoke;
+     grid-column-start: 2;
+     grid-column-end: 3;
+     grid-row-start:  2;
+     grid-row-end: 5; 
+     margin-left: 20px;
+ }
+ .header4{
+     border: none;
+     grid-column-start: 1;
+     grid-column-end: 4;
+     grid-row-start: 1;
+     margin-bottom: 30px;
+ }
+ .content40{
+     /* could not find this div for a long time it was due to the fact that the grid column was the same as title4 so it was behind it!!!! */
+    /* border: solid; */
+    grid-column: 1/2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    margin-left: 20px;
+    background-image: url("../images/overviewhotel_400x600.jpg");
+    /* image from https://images.unsplash.com/photo-1528916138893-06acfc566dea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=df03367ae486f9f0764a7da442b5067c&auto=format&fit=crop&w=500&q=60, https://unsplash.com/ */
+    background-repeat: no-repeat;
+    color: black;
+ }
+ .sidebar5{ 
+     /* border: solid; */
+     grid-column: 3/4;
+     grid-row-start: 2;
+     grid-row-end: 5;
+     margin-right: 20px;
+     background-image: url("../images/overviewhotel2.jpeg");
+     /* image from https://images.unsplash.com/photo-1525596662741-e94ff9f26de1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ac4de836de7f910918d2f821e624890b&auto=format&fit=crop&w=500&q=60, https://unsplash.com/ */
+ }
+ #slide1{
+    height:600px;
+    width:400px;
+ }
+ .footer4{
+     border: solid;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ }
+ /*--------------------- INDEX5.HTML CUBA ------------ */
+ .header{
+     border: none;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ }
+ .contentBoxThree{ 
+     /* holds main image for page */
+     border: none;
+     grid-column: 2/3;
+     grid-row: span 3;
+     box-shadow: 10px 10px whitesmoke;
+     background-image: url("../images/cuba.jpg");
+     /* image from https://www.google.com/search?q=boutique+hotel&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiQ2MmM08XdAhVJ2lMKHRkHDYMQ_AUIDygC&biw=1440&bih=656#imgrc=O8YJBv0a2nYUrM: */
+    background-repeat: no repeat;
+    }
+ .contentSmallTwo{
+     border: solid  rgb(242, 47, 109);
+     grid-column: 2/3;
+ }
+ #textP3{
+     font-size: 20px;
+     color: rgb(2, 2, 2);
+ }
+ .footer{
+     border: solid;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ }
+ /*------------------------ END OF INDEX5.HTML ------------------------- */
+ 
+ /* ------------------------INDEX6.HTML CONTACT ------------------*/
+ .header{
+     border: none;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ } 
+ .containerForm{
+    /* holds actual form */
+     /* div that holds the form tag */
+     height:300px;
+     width: 700px;
+     margin-left: 35%;
+     border: 1px none;
+    }
+ .titleContact{
+     /* div for text/this may not be necessary */
+     border: none;
+     grid-column-start: 1;
+     grid-column-end: 2;
+     grid-row-start: 2;
+     grid-row-end: 3;
+     background-color: white;
+ } 
+ #contactTextH2{
+     /* get in touch text */
+     margin-top: -10px;
+     color:  black;
+      font-size: 40px;
+      text-decoration: rgba(236, 195, 13, 0.678) underline;
+ }
+ input{
+     /* input fields */
+     color: rgb(242, 47, 109);
+     background-color: white;
+     width: 500px;
+     height: 30px;
+     margin-top: 10px;
+     margin-left: 80px;
+    
+ }
+ #buttonContact{
+     /* calling button by id to style this one button in a certain way */
+     margin-top: 0%;
+     margin-left: 82px;
+     width: 500px;
+     height: 20px;
+     border: 1px solid;
+ }
+ /* -------------------------------END OF INDEX6.HTML ------------------- */
+ 
+ /* ------------------ INDEX7.HTML ESCAPE----------------*/
+ .contentBoxFive{
+     /* main div */
+     border: none;
+     display: grid;
+     grid-template-columns: 1fr  3fr 1fr;
+     /* defining columns inside grid */
+     grid-auto-rows: minmax(200px, auto);
+                     /* smallest size of a row will be 200px */
+                     /* but will expand to fit content when needed */
+     grid-gap: 10px;
+     /* space gap bewteen column and rows  */
+     align-items: stretch;
+     background-color:white;
+    
+ }
+ .header{
+     border: none;
+     grid-column-start: 1;
+     grid-column-end: 4;
+ }
+ .contentBoxFive{ 
+     /* holds main image for page */
+     border: none;
+     grid-column: 2/3;
+     grid-row: span 3;
+ }
+ 
+ .map{
+     /* map of caribbean */
+     margin-top: -175px;
+     margin-left: 10%;
+     height: 800px;
+     width: 950px; 
+     border: none;
+     background-image: url("../images/mapofthecarribbean.png");
+     /* image from https://www.google.com/search?q=map+of+caribbean&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiOy4upt8jdAhVBzFMKHckPCIMQ_AUIDygC&biw=1440&bih=705 */
+     background-repeat: no-repeat;
+ }
+ #escapeP{
+     font-size: 70px;
+     font-family: 'Syncopate', sans-serif;
+     color: rgb(245, 165, 108);
+    }
+ .circleOne{
+     /* circles that are on top of map (circleTwo and circleThree)  */
+     border: none;
+     height: 10px;
+     width: 10px;
+     margin-top: 67.5%;
+     margin-left: 10%;
+     border-radius: 50%;
+     background-color: rgba(236, 195, 13);
+ }
+ .circleOne:hover{
+     /* on hover expand */
+     transform: scale(2.0);
+ }
+ .circleTwo{
+     border: none;
+     height: 5px;
+     width: 5px;
+     margin-top: -20px;
+     margin-left: 89%;
+     border-radius: 50%;
+     background-color:  rgba(236, 195, 13);
+ }
+ .circleTwo:hover{
+     transform: scale(2.0);
+ }
+ .circleThree{
+     border: none;
+     height: 12px;
+     width: 12px;
+     margin-top: -41%;
+     margin-left: 30%;
+     border-radius: 50%;
+     background-color:  rgba(236, 195, 13);
+ }
+ .circleThree:hover{
+     transform: scale(2.0);
+ }
+ 
+ /* --------------------INDEX8.HTML--------------------- */
+ table{
+     /* created table layout booking page */
+     margin-left: 250px;
+     margin-top: -50px;
+     height: 500px;
+     width: 700px;
+     border:  solid rgb(245, 165, 108);
+     color:rgba(245, 163, 108, 0.947);
+ }
+ #roomOne{
+     border: solid;
+     
+ }
+ #guest{
+     margin-left: 10px;
+     width: 20px;
+ }
+ #calender{
+     margin:auto;
+     width: 100px;
+ }
+ #bookingButton{
+     margin-left:10px;
+     height: 45px;
+     width: 70px;
+ }
+ th{ 
+ 
+     border: solid rgba(245, 163, 108, 0.947) ;
+     font-family: 'Syncopate', sans-serif;
+ }
+ .modalBtn{
+    display: none;
+    /* dont want to the modal to appear right away when page opens */
+    position: fixed; 
+    /* stay in place */
+    z-index: 1;
+    /* order of elements higher z-index the more it will be in front */
+    padding-top: 100px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    /*  */
+    background-color: rgba(0, 0, 0, 0.404);
+       /* opactity*/
+}
+.modalContent{
+    background-color: white;
+    margin:  auto;
+    padding: 20px;
+    border: 1px solid;
+    width: 80%;
+}
+#bookBtn{
+    height: 29px;
+    width: 50px;
+    margin-left: 15px;
+}
+#btnConfirm{
+    font-size: 30px;
+    color: rgb(242, 47, 109);
+}
+.closeBtn{
+    color:rgba(236, 195, 13, 0.678);
+    float: right;
+    font-size: 28px;
+}
+.closeBtn:hover
+{
+    color: black;
+}
+ /*----------------- END INDEX8.HTML------------ */
+ 
+ 
+ /*----------- INDEX9.HTML--------------------------------- */
+ .containerNine{
+     border: none;
+     display: grid;
+     grid-template-columns: 1fr  1fr 1fr;
+     /* defining columns inside grid */
+     grid-template-rows: 1fr 1fr;
+     grid-auto-rows: minmax(200px, auto);
+     grid-gap: 10px;
+     background-color: white;
+ } 
+ .contentBoxNine{ 
+     margin-top: -40%;
+     /* holds main image for page */
+     /* border: solid rgba(236, 195, 13, 0.678); */
+     grid-column: 1/3;
+     grid-row: span 2;
+     /* box-shadow: 10px 10px whitesmoke; */
+     margin-bottom: 80%;
+ }
+ .blueBoxNine{
+     /*holds name of destination  */
+     /* border: solid black; */
+     margin: auto; 
+     margin-top: 51%;
+     font-size: 35px;
+     background-image: url("../images/yellowpinkflowers.jpg");
+     /* image from https://www.pinterest.com/pin/279715826826577171/ */
+     text-align: center;
+     font-family: 'Syncopate', sans-serif;
+     color: whitesmoke;
+ } 
+ /* #smallBlueBoxNine{
+     height: 5px;
+     width: 1150px;
+     margin-left: 10%;
+     margin-top: -75%;
+     background-color:  rgb(242, 47, 109);
+ }  */
+ h3{ 
+     text-decoration: underline;
+    color: rgb(242, 47, 109);
+     margin-top: -35%;
+     font-size: 20px;
+     font-family: 'Syncopate', sans-serif;
+ }
+ p{
+     color: rgb(242, 47, 109);
+    font-size: 20px;
+   font-family: 'Dosis', sans-serif;
+ }
+ .secondBtn{
+     border: none;
+    color:rgb(242, 47, 109);
+    background-color: white;
+    font-size: 15px;
+    box-shadow: 2px 2px white;
+    font-family: 'Syncopate', sans-serif;
+    }

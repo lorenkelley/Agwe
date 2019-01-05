@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- link css -->
+    <link href="https://fonts.googleapis.com/css?family=Syncopate" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <!-- link text styles -->
+</head>
+<body>
+    <div class="container">
+        <!-- main div -->
+        <div class="header">
+            <!-- navigation bar & elements  -->
+                <ul>
+                    <!-- unorderd list allows me to have more flexiablity than nav tag to me -->
+                       <a href="../index.html"><li>Home</li></a> 
+                       <a href="index9.html"><li>About</li></a> 
+                       <a href="index4.html"><li>Gallery</li></a> 
+                       <a href="index7.html"><li>Escape</li></a> 
+                       <a href="index8.html"><li>Book</li></a> 
+    
+                       <a href="index6.html"><li>Contact</li></a> 
+                       
+                     </ul>
+        </div>
+        <div class="bookingTable">
+            <!-- sub div that holds all content of table -->
+                <table>
+                        <tr class="bookingTitle">
+                                <th> Room
+                                </th>
+                                <th>Guests</th>
+                                <th>Date
+                                    <form ></form>
+                                </th>
+                                <th>Reserve</th>
+                        </tr>
+                        <tr id="roomOne">
+                            <td>
+                                <!-- room one -->
+                              <img id="bookingImg" src="../images/bookHotel3.jpeg">
+                              <!-- image from http://www.simpleimageresizer.com/_uploads/photos/ef537966/luxury-resort-room_00444910_560x420.jpg, http://www.simpleimageresizer.com/_uploads/photos/ef537966/luxury-resort-room_00444910_560x420.jpg -->
+                            </td>
+                            <td> 
+                                <!-- guests -->
+                                <input id="guest" type="number">
+                            </td>
+                            <td>
+                                <!-- date -->
+                             <input id="calender" type="datetime-local">
+                            </td>
+                            <td>
+                                <!-- reserve -->
+                                <button id="bookBtn">BOOK</button>
+                                <div id="btnModal" class="modalBtn">
+
+                                        <!-- modal content -->
+                                    <div class="modalContent">
+                                    <span class="closeBtn">&times;</span>
+                                    <h2 id="btnConfirm">Confirmation of Booking</h2>
+                                     <p>Thank You For Booking Agwe Hotels. We Look Foward To Having You Stay With Us. You Will Be Recieving An Email Shortly With Details About Your Trip.</p>
+                                    </div>
+                                    
+                                    </div>
+                            </td>
+                         </tr>
+                         
+                         <tr>
+                            <td> 
+                                    <img src="../images/bookHotel2.jpeg">
+                                    <!-- image  from https://ritzcarlton-h.assetsadobe.com/is/image/content/dam/the-ritz-carlton/hotels/usa-and-canada/florida/miami-the-miami-beach-edition/guest-rooms/supportingimages/ED-MIAEB-10-new_RCMMBED_00025.png?$SmallViewport100pct$, https://www.google.com/ -->
+                            </td>
+                            <td>
+                                <!-- guests -->
+                                <input id="guest" type="number">
+                            </td>
+                            <td>
+                                 <!-- date -->
+                             <input id="calender" type="datetime-local">
+                            </td>
+                            <td>
+                                <!-- reserve -->
+                                <button id="bookBtn">BOOK</button>
+                            </td>
+                        </tr>   
+        </div>
+</div>
+<script src="../app.js"></script>
+</body>
